@@ -1,7 +1,7 @@
-title: "mccamon.org"
+title: "aroundthethird.org"
 author: "Mike McCamon"
-description: "Nothing special going on here"
-permalink: /:title/
+description: "Impacting the lives of those in KS-03"
+permalink: /:year/:month/:title/
 lang: "en"
 excerpt_separator: "<!-- more -->"
 date_format: "%B %d, %Y"
@@ -25,13 +25,10 @@ collectons:
 navigation:
   - {file: "index.html", icon: home}
   - {file: "blog.md"}
-  - {file: "mike.md" }
-  - {file: "jody.md" }
 
 
 external:                    # see http://fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:mike@Mccamon.org"}
-  - {title: Github, icon: github, url: "https://github.com/mccamon/contrast"}
   - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
 comments:
