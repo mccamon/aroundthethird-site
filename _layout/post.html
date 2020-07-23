@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article>
+  
+  {% capture hero-var %}{{ post.image }}{% endcapture %}
+  {% capture thumbnail-var %}{{ post.thumb }}{% endcapture %}
+  
+  {% include meta.html post=page hero=hero-var thumbnail=thumbnail-var %}
+    {% if post.banner != nill %}
+     <span font-size="3em">{{ post.banner }}</span>
+    {% else %}
+      {% if post.image != nil %}<img src="{{ post.image }}">{% endif %}
+      {% if post.thumb != nil %}<span style="float:right; padding-left:10px;"><img src="{{ post.thumb }}" width="200"></span>{% endif %} 
+      {{ content }}
+      {% if page.comments != false and site.comments.isso or site.comments.disqus %}
+        <hr>
+        {% if site.comments.isso_domain %}<div id="isso-thread"></div>{% endif %}
+        {% if site.comments.disqus_shortname %}<div id="disqus_thread"></div>{% endif %}
+        <noscript>Please enable JavaScript to view comments.</noscript>
+      {% endif %}
+  {% endif %}
+</article>
+
+{% if site.show_related %}
+  <footer class="related">
+    <div class="previous">{% if page.previous.url %}<span>Previous Post</span><a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>{% endif %}</div>
+    <div class="next">{% if page.next.url %}<span>Next Post</span><a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>{% endif %}</div>
+  </footer>
+{% endif %}
+
+<span style="font-size: .8em"><a href="{{ site.github.repository_url }}/blob/master/{{ page.path }}">Edit</a></span>
