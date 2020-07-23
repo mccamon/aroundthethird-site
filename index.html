@@ -3,24 +3,23 @@ layout: default
 title: Home
 ---
 
-<img src="{{ site.baseurl }}/assets/images/mccamon-family.png">
+<img src="{{ site.baseurl }}/assets/images/ks03-sky.png">
 
-Lucas, Lina, Victoria, Logan, <a href="{{ site.baseurl }}/mike">Mike</a>, <a href="{{ site.baseurl }}/jody">Jody</a>
+<h2>Welcome to AroundTheThird.org</h2>
 
-<h2>Welcome to mccamon.org</h2>
+<p>Mike and Jody McCamon founded AroundTheThird to gift and bring visibility to causes and nonprofits serving or located in the Kansas 3rd Congressional District. Certainly the most lasting impact on us from the 2018 Democratic Primary for us were the many dedicated and wonderful people who serve our neighbors in need.</p>
 
-<p>Mike is a long-time tech sector professional and built this site with GitHub pages. Click on a name above to view more information about each of us. If the name isn't linked, there is no content. Mike occasionally writes on his <a href="{{ site.baseurl }}/blog-mike">blog</a>. We are not really sure why Logan is looking to his right while the rest of us are looking at the camera.</p>
-
-<h2>Recent Blog Posts...</h2>
+<h2>Charities Making an Impact</h2>
 <ul>
-  {% for post in site.posts | sort:"date" | reverse  %}
-    <!-- Calculate Reading time -->
-    {% assign post-length =  post.content | number_of_words %}
-    {% assign est-read = post-length | divided_by: 200 %}
+  <li>AIRR (Advocates for Immigration Rights and Reconciliation)
+  <li>Free Hot Soup - Olathe
+  <li><a href="https://www.facebook.com/I-Val-U-Me-327063947478426/" target="_blank">I Val U Me</a>
+  <li><a href="https://www.facebook.com/ProjectRallySolutions/" target="_blank">Project Rally</a>
+  <li><a href="https://www.givinggrove.org/" target="_blank">Giving Grove</a>
+  <li><a href="https://www.hearttoheart.org/" target="_blank">Hearth to Heart International</a>
+  <li><a href="https://www.prostatenetwork.org/" target="_blank">Prostate Network</a>
 
-    {% if forloop.index < 11 %}   <!-- get only first five posts -->
-      <li><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a><span style= "color:#b8b8b8"> by {{ post.author }}, {{ post.date |  date: '%b %Y'  }},
-      {% if est-read > 3 %}{{est-read | round }} min read{% else %}<2 min read{% endif %}</span></li>
-    {% endif %}
-  {% endfor %}
+  <li><a href="https://www.facebook.com/groups/441616559601148/" target="_blank">Free Hot Soup Wyandotte and Johnson County</a>
+    
+
 </ul>
