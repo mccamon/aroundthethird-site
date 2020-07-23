@@ -17,10 +17,14 @@ show_title: false            # always keep the site title visible
 dark_header: false           # always keep the header dark
 minimal: true               # use simpler style
 
+collectons:
+  authors:
+    output: true
+
 # Menu
 navigation:
   - {file: "index.html", icon: home}
-  - {file: "blog.md"}
+  - {file: "blog.html"}
 
 external:                    # see http://fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:mike@Mccamon.org"}
@@ -33,3 +37,7 @@ comments:
 plugins:
  - jekyll-feed
  - jekyll-paginate
+
+# pageinate
+paginate: 5
+paginate_path: "blog/page:num/"
